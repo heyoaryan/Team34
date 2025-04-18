@@ -1,0 +1,103 @@
+.dashboard-container {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background: linear-gradient(145deg, #f3f4f8, #e0f7fa);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #7e5dbb, #311c4a, #060f1f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(81, 43, 138, 0.86);
+  }
+  
+  /* Stat Cards in single row */
+  .stats-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 750px;
+  }
+  
+  .card {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+  .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #300d53;
+  }
+  .card p {
+    font-size: 2rem;
+    color: #8c64b3;
+    font-weight: bold;
+  }
+  
+  /* Chart Boxes */
+  .chart-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem 0;
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
+  }
+  
+  .chart-box h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #300d53;
+  }
+  
+  .chart-wrapper {
+    position: relative;
+    height: 300px;
+    width: 100%;
+  }
+  
+  @keyframes glowShift {
+    0%, 100% {
+      text-shadow: 0 0 10px #6a11cb, 0 0 20px #2575fc;
+    }
+    50% {
+      text-shadow: 0 0 20px #2575fc, 0 0 30px #6a11cb;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .stats-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      width: 90%;
+    }
+    .chart-wrapper {
+      height: 250px;
+    }
+  }
+  
